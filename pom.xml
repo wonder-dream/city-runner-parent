@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.3</version>
+        <version>3.4.1</version>
         <relativePath/>
     </parent>
 
@@ -34,13 +34,17 @@
         <mybatis-plus.version>3.5.5</mybatis-plus.version>
         <lombok.version>1.18.30</lombok.version>
         <hutool.version>5.8.25</hutool.version>
+        <jackson-annotations.version>2.15.4</jackson-annotations.version>
+        <redisson.version>3.27.2</redisson.version>
+        <mysql.version>8.0.33</mysql.version>
     </properties>
 
     <!-- ==================== 子模块 ==================== -->
     <modules>
-        <!-- 在此添加子模块 -->
-        <!-- <module>city-runner-common</module> -->
-        <!-- <module>city-runner-service</module> -->
+        <module>runner-common</module>
+        <module>runner-model</module>
+        <module>runner-service</module>
+        <module>runner-api</module>
     </modules>
 
     <!-- ==================== 依赖管理 ==================== -->
@@ -74,6 +78,20 @@
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
+            </dependency>
+
+            <!-- Redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <!-- MySQL -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

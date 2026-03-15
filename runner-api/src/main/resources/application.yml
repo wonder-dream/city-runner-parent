@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: city-runner
+
+  # MySQL 配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://8.130.29.228:3306/city_runner?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: MYSQL@qjn517120
+
+  # Redis 配置
+  data:
+    redis:
+      host: 8.130.29.228
+      port: 6379
+      password: REDIS@qjn517120
+      database: 0
+      timeout: 3000ms
+
+# MyBatis Plus 配置
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.vague.runner.model.entity
+  configuration:
+    map-underscore-to-camel-case: true
