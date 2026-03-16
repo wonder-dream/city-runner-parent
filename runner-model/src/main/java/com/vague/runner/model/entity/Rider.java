@@ -17,6 +17,8 @@ public class Rider {
 
     private String realName;                  // 真实姓名
     private String idCard;                    // 身份证号
+    private String idCardFrontImage;          // 身份证正面照片URL
+    private String idCardBackImage;           // 身份证反面照片URL
     private Byte status;                      // 状态：0=待审核 1=正常 2=休息中 3=已禁用
 
     // 位置信息 （用于附近搜单）
